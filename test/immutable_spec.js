@@ -10,7 +10,7 @@ describe('immutability', () => {
       let state = 42
       let nextState = increment(state)
 
-      equal(nextState).to.equal(43)
+      expect(nextState).to.equal(43)
       expect(state).to.equal(42)
     })
   })
