@@ -9,7 +9,7 @@ export function next(state) {
                        .concat(getWinners(state.get('vote')))
   if (entries.size === 1) {
     return state.remove('vote')
-                .remove('entries')
+                .remove('setEntrieses')
                 .set('winner', entries.first())
   } else {
     return state.merge({
