@@ -1,5 +1,5 @@
-import {List, Map} from 'immutable'
-import {expect} from 'chai'
+import { List, Map } from 'immutable'
+import { expect } from 'chai'
 
 import {setEntries, next, vote} from '../src/core'
 
@@ -44,7 +44,7 @@ describe('application logic', () => {
         entries: List.of('Sunshine', 'Millions', '127 Hours')
       })
       const nextState = next(state);
-      expect(nextState).to.eqaul(Map({
+      expect(nextState).to.equal(Map({
         vote: Map({
           pair: List.of('Sunshine', 'Millions')
         }),
@@ -64,7 +64,7 @@ describe('application logic', () => {
         entries: List.of('Sunshine', 'Millions', '127 Hours')
       })
       const nextState = next(state)
-      expect(nextState).to.eqaul(Map({
+      expect(nextState).to.equal(Map({
         vote: Map({
           pair: List.of('Sunshine', 'Millions')
         }),
@@ -84,7 +84,7 @@ describe('application logic', () => {
         entries: List()
       });
       const nextState = next(state)
-      expect(nextState).to.eqaul(Map({
+      expect(nextState).to.equal(Map({
         winner: 'Trainspotting'
       }))
     })
